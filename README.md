@@ -6,9 +6,14 @@ Simple Rest API For [Plant Village Datasets](https://github.com/spMohanty/PlantV
 
 ### To run this project Locally
 
-git clone git@github.com:ErKiran/PlantVillageAPI.git
+git clone https://github.com/ErKiran/PlantVillageAPI.git
 
 ```js
 npm i
 node index.js
 ``` 
+### To get all the info or insert info if not already in database
+http://localhost:5000/api/submit
+
+### To get specific disease
+http://localhost:5000/api/desc/test
