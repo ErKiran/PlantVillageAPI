@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+require('./src/gdrive')
 
 const { MLab } = require('./config/config');
 const api = require('./src/api');
