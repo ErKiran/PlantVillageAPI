@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const passport = require('passport')
 
 const User = require('../../models/user');
-const { secretOrKey } = require('../../config/config');
+const secretOrKey = process.env.secretOrKey;
 const { validateUserInfo } = require('../../validations/user');
 
 const router = express.Router();

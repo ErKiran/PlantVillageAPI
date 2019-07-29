@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const datatoinsert = require('../../data/xlsxtojson.json');
 const { latest_img } = require('../gdrive');
+const Detection_model = require('../../data/model.json')
 
 const Unst = require('../../models/unstructured');
 
@@ -30,10 +31,8 @@ router.get('/latest/img', async (req, res) => {
     res.send(latest_img)
 })
 
-router.get('/test', (req, res) => {
-    console.log(req.ip)
+router.get('/model', (req, res) => {
+    res.json(Detection_model);
 })
-
-
 
 module.exports = router

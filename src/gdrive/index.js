@@ -58,18 +58,23 @@ async function listFiles(auth) {
         })
         const files = list.data.files;
         const onlyimage = files.filter(i => i.mimeType === 'image/jpeg');
-        if (onlyimage.length) {
-            try {
-                let thumblink = onlyimage[0].thumbnailLink;
-                const link = thumblink.slice(0, -5);
-                latest_img.new = link;
+        if (files.length) {
+            if (onlyimage.length) {
+                try {
+                    let thumblink = onlyimage[0].thumbnailLink;
+                    const link = thumblink.slice(0, -5);
+                    latest_img.new = link;
+                }
+                catch (e) {
+                    throw e
+                }
             }
-            catch (e) {
-                throw e
+            else {
+                console.log('No Image found.');
             }
         }
         else {
-            console.log('No files found.');
+            console.log('No files found')
         }
     }
     catch (e) {

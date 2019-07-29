@@ -1,3 +1,5 @@
 node_modules
 config/config.js
-config/
+config/token.json
+config/credentials.json
+.env
