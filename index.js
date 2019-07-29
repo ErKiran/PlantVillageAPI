@@ -25,6 +25,11 @@ require('./config/passport')(passport)
 
 app.use('/api', api);
 app.use('/auth', auth);
+app.get('/', (req, res) => {
+    res.json({
+        msg: 'That works'
+    })
+})
 
 const port = process.env.PORT || 5000;
 
