@@ -7,7 +7,8 @@ const Detection_model = require('../../data/model.json')
 const Unst = require('../../models/unstructured');
 
 router.get('/submit', async (req, res) => {
-    const data = await Unst.find({});
+    if (req.user.role === 'admin')
+        const data = await Unst.find({});
     if (data.length === 0) {
         Unst.insertMany(datatoinsert)
         res.json('Data sucessfully added')
