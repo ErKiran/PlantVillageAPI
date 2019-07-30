@@ -1,4 +1,4 @@
-# PlantVillageAPI
+# PlantVillageAPI [![Build Status](https://dev.azure.com/lordkiru/lordkiru/_apis/build/status/plant-disease%20-%20CI?branchName=master)](https://dev.azure.com/lordkiru/lordkiru/_build/latest?definitionId=3&branchName=master)
 Simple Rest API For [Plant Village Datasets](https://github.com/spMohanty/PlantVillage-Dataset/tree/master/raw/color)
 
 ### Make sure you have Node and npm install 
