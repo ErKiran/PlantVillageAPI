@@ -61,8 +61,8 @@ async function listFiles(auth) {
         if (files.length) {
             if (onlyimage.length) {
                 try {
-                    let thumblink = onlyimage[0].thumbnailLink;
-                    const link = thumblink.slice(0, -5);
+                    let thumblink = onlyimage.map(i => i.thumbnailLink);
+                    const link = thumblink.map(i => i.slice(0, -5));
                     latest_img.new = link;
                 }
                 catch (e) {
