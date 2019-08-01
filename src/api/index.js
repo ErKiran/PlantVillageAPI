@@ -21,6 +21,7 @@ router.get('/submit', async (req, res) => {
 
 router.get('/desc', async (req, res) => {
     const getdes = await Unst.findOne({ DISEASE: req.query.disease });
+    console.log(req.query)
     if (!getdes) {
         res.json(`We are unable to find ${req.query.disease} in our database`);
     }
