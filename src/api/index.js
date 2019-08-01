@@ -19,10 +19,10 @@ router.get('/submit', async (req, res) => {
     }
 });
 
-router.get('/desc/:disease', async (req, res) => {
-    const getdes = await Unst.findOne({ DISEASE: req.params.disease });
+router.get('/desc', async (req, res) => {
+    const getdes = await Unst.findOne({ DISEASE: req.query.disease });
     if (!getdes) {
-        res.json(`We are unable to find ${req.params.disease} in our database`);
+        res.json(`We are unable to find ${req.query.disease} in our database`);
     }
     else {
         res.json(getdes)
