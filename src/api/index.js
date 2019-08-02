@@ -1,18 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const { latest_img } = require('../gdrive');
+const datatoinsert = require('../../data/info.json')
 
 const Unst = require('../../models/unstructured');
 
 router.get('/submit', async (req, res) => {
     const data = await Unst.find({});
     if (data.length === 0) {
-        if (req.user.role === 'admin') {
-            // Unst.insertMany(datatoinsert)
-            res.json('Data sucessfully added')
-        } else {
-            res.json('Only Admin can Insert the data')
-        }
+        Unst.insertMany(datatoinsert)
+        res.json('Data sucessfully added')
     }
     else {
         res.json(data)
