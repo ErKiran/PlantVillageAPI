@@ -40,6 +40,6 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
-    "mocha": "^6.2.3"
+    "mocha": "^10.2.0"
   }
 }
